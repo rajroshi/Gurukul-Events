@@ -1,0 +1,251 @@
+/* Main Event Container */
+.gurukul-event-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(to right, #fff9f0, #fff);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Event Title */
+.gurukul-event-container h1 {
+    color: #8B4513;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: 'Palatino Linotype', serif;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.gurukul-event-container h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(to right, #FF8C00, #FFA500);
+}
+
+/* Event Meta Information */
+.event-meta {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    border-left: 4px solid #FF8C00;
+    margin: 2rem 0;
+}
+
+.event-meta p {
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.event-meta strong {
+    color: #8B4513;
+    min-width: 120px;
+    display: inline-block;
+}
+
+/* Event Content */
+.event-content {
+    line-height: 1.8;
+    color: #444;
+    font-size: 1.1rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+/* Registration Form */
+.event-registration-form {
+    background: #fff8ef;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.event-registration-form button {
+    background: linear-gradient(to right, #FF8C00, #FFA500);
+    color: white;
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.event-registration-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 140, 0, 0.2);
+}
+
+/* Admin Event List Styling */
+.wp-admin .gurukul-events-list {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.wp-admin .gurukul-event-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr auto;
+    gap: 1rem;
+    padding: 1rem;
+    border-bottom: 1px solid #eee;
+    align-items: center;
+}
+
+/* Event Type Badges */
+.event-type-badge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.event-type-anusthan {
+    background: #FFE4B5;
+    color: #8B4513;
+}
+
+.event-type-deeksha {
+    background: #E6E6FA;
+    color: #4B0082;
+}
+
+.event-type-teaching {
+    background: #F0FFF0;
+    color: #228B22;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gurukul-event-container {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .gurukul-event-container h1 {
+        font-size: 2rem;
+    }
+
+    .event-meta {
+        padding: 1rem;
+    }
+
+    .wp-admin .gurukul-event-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+}
+
+/* Form Fields Styling */
+.gurukul-event-meta input[type="date"],
+.gurukul-event-meta input[type="number"],
+.gurukul-event-meta select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.gurukul-event-meta label {
+    color: #666;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Status Indicators */
+.registration-status {
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.status-pending {
+    background: #FFF3CD;
+    color: #856404;
+}
+
+.status-approved {
+    background: #D4EDDA;
+    color: #155724;
+}
+
+.status-rejected {
+    background: #F8D7DA;
+    color: #721C24;
+}
+
+/* Event Categories Styling */
+.event-category {
+    display: inline-block;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Category-specific colors */
+.event-category[data-category="Anusthan"] {
+    background: #f0f7ff;
+    color: #0073aa;
+}
+
+.event-category[data-category="Deeksha"] {
+    background: #fff0f4;
+    color: #d63638;
+}
+
+.event-category[data-category="Teaching"] {
+    background: #f0fff4;
+    color: #00a32a;
+}
+
+.event-category[data-category="Sadhana Shivir"] {
+    background: #fff8e5;
+    color: #996800;
+}
+
+.event-category[data-category="Online Workshop"] {
+    background: #f6f7ff;
+    color: #3858e9;
+}
+
+.event-category[data-category="Meditation"] {
+    background: #f0f7ff;
+    color: #2271b1;
+}
+
+.event-category[data-category="Satsang"] {
+    background: #fff0f7;
+    color: #8c1749;
+}
+
+.event-category[data-category="Yagya"] {
+    background: #fff2e5;
+    color: #cc4a1a;
+}
+
+.event-category[data-category="Retreat"] {
+    background: #f0fff8;
+    color: #008a20;
+}
+
+.event-category[data-category="Special Event"] {
+    background: #f6e7ff;
+    color: #7e3bd0;
+} 
