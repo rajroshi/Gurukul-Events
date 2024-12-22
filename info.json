@@ -1,0 +1,17 @@
+{
+    "name": "Gurukul Events Management",
+    "version": "0.9.0-beta",
+    "download_url": "https://github.com/rajroshi/gurukul-events/releases/download/v0.9.0-beta/gurukul-events.zip",
+    "homepage": "https://tantragurukul.org",
+    "requires": "5.0",
+    "tested": "6.4",
+    "last_updated": "2024-01-10 00:00:00",
+    "upgrade_notice": "Beta release with initial features",
+    "author": "Rajesh Benjwal",
+    "author_homepage": "https://tantragurukul.org",
+    "sections": {
+        "description": "Manage religious events like Anusthan, Deeksha, and Teachings for Hindu Gurukul",
+        "installation": "Upload the plugin to your WordPress site and activate it. Configure settings under Events → Settings.",
+        "changelog": "0.9.0-beta:\n* Initial beta release\n* Event management system\n* Custom categories\n* Registration system"
+    }
+} 

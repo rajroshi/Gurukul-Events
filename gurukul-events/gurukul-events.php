@@ -2,8 +2,14 @@
 /*
 Plugin Name: Gurukul Events Management
 Description: Manage religious events like Anusthan, Deeksha, and Teachings for Hindu Gurukul
-Version: 1.0
-Author: Your Name
+Version: 0.9.0-beta
+Author: Rajesh Benjwal
+Author URI: https://tantragurukul.org
+Plugin URI: https://github.com/rajroshi/gurukul-events
+Text Domain: gurukul-events
+Domain Path: /languages
+License: GPL v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.txt
 */
 
 // Prevent direct access
@@ -12,8 +18,26 @@ if (!defined('ABSPATH')) {
 }
 
 // Define plugin constants
+define('GURUKUL_EVENTS_VERSION', '0.9.0-beta');
 define('GURUKUL_EVENTS_PATH', plugin_dir_path(__FILE__));
 define('GURUKUL_EVENTS_URL', plugin_dir_url(__FILE__));
+define('GURUKUL_EVENTS_BASENAME', plugin_basename(__FILE__));
+
+// Add update checker
+require_once GURUKUL_EVENTS_PATH . 'includes/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$updateChecker = PucFactory::buildUpdateChecker(
+    'https://github.com/rajroshi/gurukul-events/',
+    __FILE__,
+    'gurukul-events'
+);
+
+// Set the branch that contains the stable release
+$updateChecker->setBranch('main');
+
+// Optional: If you're using releases, set the license key
+$updateChecker->setAuthentication('your-github-token');
 
 // Register Custom Post Type for Events
 function gurukul_events_post_type() {
